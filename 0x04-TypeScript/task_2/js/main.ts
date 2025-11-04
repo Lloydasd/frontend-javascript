@@ -44,11 +44,11 @@ function createEmployee(salary: number|string){
 
 console.log(createEmployee(200));
 
-function isDirector(employee: Teacher | Director):employee is Director{
+ export function isDirector(employee: Teacher | Director):employee is Director{
   return employee instanceof Director
 }
 
-function executeWork(employee : Teacher | Director){
+export function executeWork(employee : Teacher | Director){
   if(isDirector(employee)){
     return employee.workDirectorTasks()
   }else {
